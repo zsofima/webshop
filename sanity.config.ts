@@ -7,7 +7,8 @@ export default defineConfig({
   name: "default",
   title: "Sanity Next.js Site",
 
-  projectId: "itn4ex1z",
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECTID ?? '',
+  
   dataset: "production",
   basePath: "/studio",
   plugins: [structureTool(), visionTool()],
